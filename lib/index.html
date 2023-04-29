@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StoreMap Test</title>
+</head>
+<body>
+<div id="storemap"></div>
+<script type="module">
+    import {StoreMap} from "./storemap.js";
+
+    new StoreMap("#storemap", [
+        {
+            name: "Store 1",
+            lat: 50.427243,
+            lng: 8.673780,
+            color: "red",
+            icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            description: "This is store 1"
+        },
+        {
+            name: "Store 2",
+            lat: 50.427693,
+            lng: 8.670300,
+            color: "red",
+            icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            description: "This is store 2"
+        }
+    ])
+</script>
+</body>
+
+</html>

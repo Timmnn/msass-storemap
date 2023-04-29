@@ -1,0 +1,14 @@
+*{
+    outline: 1px solid #aaa;
+}
+
+.storemap{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sidebar{
+    width: 300px;
+    background-color: #eee;
+}
