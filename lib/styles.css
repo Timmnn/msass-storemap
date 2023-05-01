@@ -1,0 +1,38 @@
+.storemap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.storemap .title {
+  margin-left: 15px;
+}
+.storemap a {
+  text-decoration: underline;
+}
+.storemap .sidebar {
+  overflow-y: auto;
+  width: 300px;
+  background-color: #eee;
+  border: 2px solid #ddd;
+}
+.storemap .sidebar .sidebar-feature {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-left: 5px solid transparent;
+}
+.storemap .sidebar .sidebar-feature.active {
+  border-left: 5px solid #333;
+}
+.storemap .sidebar .sidebar-feature:last-child {
+  margin-bottom: 30px;
+}
+.storemap .company-label {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  background-color: #ddd;
+  border-top-right-radius: 5px;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */
