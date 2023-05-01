@@ -1,13 +1,67 @@
 <template>
     <footer>
-        <p>© 2023</p>
+        <div class="container">
+            <nav id="footer-nav">
+                <ul class="categories">
+                    <li v-for="category in nav_categories" class="category">
+                        <h3>{{ category.name }}</h3>
+                        <ul class="links">
+                            <li v-for="link in category.links" class="link">
+                                <router-link :to="link.href">{{ link.name }}</router-link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <p>© 2023</p>
+        </div>
     </footer>
 
 </template>
 
 <script>
 export default {
-    name: "footer"
+    name: "FooterComp",
+    data() {
+        return {
+            nav_categories: [
+                {
+                    name: "Company",
+                    links: [
+                        {
+                            name: "About",
+                            href: "/about"
+                        },
+                        {
+                            name: "Contact",
+                            href: "/contact"
+                        },
+                        {
+                            name: "Impressum",
+                            href: "/impressum"
+                        }
+                    ]
+                },
+                {
+                    name: "Product",
+                    links: [
+                        {
+                            name: "Features",
+                            href: "/features"
+                        },
+                        {
+                            name: "Pricing",
+                            href: "/pricing"
+                        },
+                        {
+                            name: "FAQ",
+                            href: "/faq"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -18,15 +72,38 @@ footer {
   background-color: $dark;
   color: $light;
   padding: 1rem;
-  text-align: center;
   font-size: 1.2rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  height: 200px;
+  width: calc(100% - 2rem);
 
   p {
     margin: 0;
   }
+}
+
+li {
+  list-style: none;
+}
+
+
+#footer-nav .categories {
+  display: flex;
+  justify-content: flex-end;
+
+  .category {
+    margin-inline: 1rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    a {
+      color: $dark_accent;
+    }
+  }
+
 }
 
 </style>

@@ -1,0 +1,44 @@
+.storemap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .title{
+    margin-left: 15px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .sidebar {
+    overflow-y: auto;
+    width: 300px;
+    background-color: #eee;
+    border: 2px solid #ddd;
+
+    .sidebar-feature {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      border-left: 5px solid transparent;
+
+      &.active {
+        border-left: 5px solid #333;
+      }
+
+      &:last-child{
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+  .company-label{
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    background-color: #ddd;
+    border-top-right-radius: 5px;
+    padding: 5px;
+  }
+}
